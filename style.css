@@ -1,0 +1,271 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: Antonio;
+    src: url(Antonio-SemiBold.ttf);
+}
+
+body{
+    background-color: #191919;
+    color: #98b4b2;
+    font-family: Antonio;
+    font-size: 40px;
+    padding: 5px;
+    margin: 10px;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    margin: 0 200px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.guitar{
+    position: relative;
+    width: 130px;
+    top: 1rem;
+}
+
+.bwl{
+    position: relative;
+    width: 90px;
+    top: 1.5rem;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    font-size: 200%;
+    padding: 70px;
+}
+
+.icon{
+    padding: 50px;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(2.0);
+    }
+    100% {
+        transform: scale(1.0); 
+    }
+  }
+
+.html:hover{
+    color: #f1672b;
+    animation: pulse-animation 2s infinite;
+}
+
+.css:hover{
+    color: #049be8;
+    animation: pulse-animation 2s infinite;
+}
+
+.js:hover{
+    color: #fdca3e;
+    animation: pulse-animation 2s infinite;
+}
+
+.wp:hover{
+    color: #1b769c;
+    animation: pulse-animation 2s infinite;
+}
+
+.github{
+    color: #ffffff;
+    font-size: 90px;
+}
+
+@keyframes rotation {
+    0% {
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.github:hover{
+    animation: rotation 2s linear infinite;
+}
+
+.smiley{
+    font-size: 150%;
+}
+
+.imagecontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    width: 50%;
+    margin: 30px;
+}
+  
+.image{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+  
+.middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.container:hover .image{
+    opacity: 0.3;
+}
+  
+.container:hover .middle{
+    opacity: 1;
+}
+  
+.link{
+    background-color: #98b4b2;
+    font-size: 22px;
+    padding: 16px 32px;
+    border-radius: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #191919;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline wavy #191919;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
+
+@media screen and (max-width:1100px){
+    section{
+        margin: 60px 10px;
+        font-size: 30px;
+        text-align: center;
+        display: block;
+        min-height: 50vh;
+    }
+    .bwl{
+        width: 8%;
+        top: 0.9rem;
+    }
+    .guitar{
+        width: 8%;
+        top: 0.4rem;
+    }
+    .icons{
+        display: block;
+        padding: 30px;
+    }
+    .html{
+        color: #f1672b;
+    }
+    .css{
+        color: #049be8;
+    }
+    .js{
+        color: #fdca3e;
+    }
+    .wp{
+        color: #1b769c;
+    } 
+    .arrow{
+        display: none;
+    }
+    .icon{
+        padding: 45px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .imagecontainer{
+        display: grid;
+    }
+    .container{
+        margin: auto;
+        padding: 20px;
+        min-width: 300px;
+    }
+    .image{
+        min-height: 200px;
+        padding: 22px 0;
+    }
+    .middle{
+        opacity: 1;
+        top: 100%;
+    }
+    .link{
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .guitar{
+        width: 11%;
+        top: 0.3rem;
+    }
+    .bwl{
+        width: 11%;
+        top: 0.7rem;
+    }
+    .github{
+        color: #ffffff;
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .guitar{
+        width: 13%;
+        top: 0.1rem;
+    }
+    .bwl{
+        width: 13%;
+        top: 0.5rem;
+    }
+    
+}
